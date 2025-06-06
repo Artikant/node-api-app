@@ -1,0 +1,33 @@
+{
+  "name": "api-app",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "transform": {}
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.28.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.0.0-beta.3",
+    "jest-environment-node": "^30.0.0-beta.3",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.1"
+  }
+}
