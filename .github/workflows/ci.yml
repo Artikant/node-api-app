@@ -9,6 +9,8 @@ on:
     branches:
       - main
       - master
+permussions:
+  contents: read
 
 jobs:
   build:
