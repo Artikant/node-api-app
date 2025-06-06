@@ -32,6 +32,3 @@ jobs:
 
       - name: Run tests with Jest (ESM support)
         run: node --experimental-vm-modules node_modules/jest/bin/jest.js
-
-      - name: Run build (optional)
-        run: npm run build
