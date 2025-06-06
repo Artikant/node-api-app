@@ -19,7 +19,7 @@ jobs:
               --name my-node-app-container \
               -p 32768:3000 \
               --restart always \
-              arti231/my-node-app:126b18903d068d78cb00f7872641676b5be997c0
+              arti231/my-node-app:latest
          
        
      
