@@ -1,0 +1,26 @@
+name: Deploy to Production
+on:
+  workflow_dispatch:
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+
+    steps:
+     - uses: actions/checkout@v3
+     
+     - name: Stop old container if exists
+       with :
+         script: |
+            echo "Stopping and removing existing container (if any)..."
+            docker stop my-node-app-container || true
+            docker rm my-node-app-container || true
+
+            echo "Running new container..."
+            docker run -d \
+              --name my-node-app-container \
+              -p 32768:3000 \
+              --restart always \
+              arti231/my-node-app:latest
+         
+       
+     
